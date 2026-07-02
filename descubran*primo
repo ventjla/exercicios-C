@@ -1,0 +1,23 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+ int numero;
+ int ehprimo = 1;
+
+printf("Digite um número:");
+scanf("%d" , &numero);
+
+for(int i = 2; i < numero; i++){
+    if(numero % i == 0){
+        ehprimo = 0;
+    }
+}
+
+if(ehprimo == 1){
+    printf("O número é primo!");
+} else {
+    printf("O número não é primo...");
+}
+    return 0;
+}
