@@ -1,0 +1,120 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+ int mes;
+ 
+printf("Digite um número de 1 a 12: ");
+scanf("%d", &mes);
+switch (mes){
+    case 12:
+    case 1:
+    case 2: 
+    printf("A estação é: VERÃO\n");
+            printf("================================\n");
+printf("=       _____________         =\n");
+printf("=      |  ^     ^   |         =\n");
+printf("=      |     U      |         =\n");
+printf("=      |  \\_____/   |         =\n");
+printf("=      |____________|         =\n");
+printf("=        \\  ||||  /           =\n");
+printf("=         \\ |||| /            =\n");
+printf("=          \\||||/             =\n");
+printf("=       ____||||____          =\n");
+printf("=      |   HAPPY!   |         =\n");
+printf("=      |____VERÃO___|         =\n");
+printf("=          / || \\             =\n");
+printf("=         /  ||  \\            =\n");
+printf("=        /___||___\\           =\n");
+printf("=       /    ||    \\          =\n");
+printf("================================\n");
+break;
+    case 3:
+    case 4:
+    case 5: 
+    printf("A estação é:OUTONO\n");
+        printf("================================\n");
+printf("=       _____________         =\n");
+printf("=      |  ^     ^   |         =\n");
+printf("=      |     U      |         =\n");
+printf("=      |  \\_____/   |         =\n");
+printf("=      |____________|         =\n");
+printf("=        \\  ||||  /           =\n");
+printf("=         \\ |||| /            =\n");
+printf("=          \\||||/             =\n");
+printf("=       ____||||____          =\n");
+printf("=      |   HAPPY!   |         =\n");
+printf("=      |___OUTONO___|         =\n");
+printf("=          / || \\             =\n");
+printf("=         /  ||  \\            =\n");
+printf("=        /___||___\\           =\n");
+printf("=       /    ||    \\          =\n");
+printf("================================\n");
+break;
+    case 6:
+    case 7:
+    case 8: 
+    printf("A estação é: INVERNO\n");
+        printf("================================\n");
+printf("=       _____________         =\n");
+printf("=      |  ^     ^   |         =\n");
+printf("=      |     U      |         =\n");
+printf("=      |  \\_____/   |         =\n");
+printf("=      |____________|         =\n");
+printf("=        \\  ||||  /           =\n");
+printf("=         \\ |||| /            =\n");
+printf("=          \\||||/             =\n");
+printf("=       ____||||____          =\n");
+printf("=      |   HAPPY!   |         =\n");
+printf("=      |__INVERNO___|         =\n");
+printf("=          / || \\             =\n");
+printf("=         /  ||  \\            =\n");
+printf("=        /___||___\\           =\n");
+printf("=       /    ||    \\          =\n");
+printf("================================\n");
+break;
+    case 9:
+    case 10:
+    case 11: 
+    printf("A estação é: PRIMAVERA\n");
+    printf("================================\n");
+printf("=       _____________         =\n");
+printf("=      |  ^     ^   |         =\n");
+printf("=      |     U      |         =\n");
+printf("=      |  \\_____/   |         =\n");
+printf("=      |____________|         =\n");
+printf("=        \\  ||||  /           =\n");
+printf("=         \\ |||| /            =\n");
+printf("=          \\||||/             =\n");
+printf("=       ____||||____          =\n");
+printf("=      |   HAPPY!   |         =\n");
+printf("=      |_PRIMAVERA__|         =\n");
+printf("=          / || \\             =\n");
+printf("=         /  ||  \\            =\n");
+printf("=        /___||___\\           =\n");
+printf("=       /    ||    \\          =\n");
+printf("================================\n");
+    break;
+    default: printf("NÚMERO INVÁLIDO\n");
+    
+printf("=========================\n");
+printf("=      __________       =\n");
+printf("=     |  x    x  |      =\n");
+printf("=     |    __    |      =\n");
+printf("=     |  \\____/  |      =\n");
+printf("=      ----------       =\n");
+printf("=         ||||          =\n");
+printf("=      ___||||___       =\n");
+printf("=     | RIP ROBO |      =\n");
+printf("=     |__________|      =\n");
+printf("=        / || \\         =\n");
+printf("=       /  ||  \\        =\n");
+printf("=      /   ||   \\       =\n");
+printf("=         /  \\          =\n");
+printf("=        /____\\         =\n");
+printf("=       ... ...         =\n");
+printf("=========================\n");
+}
+
+    return 0;
+}
