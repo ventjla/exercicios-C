@@ -1,0 +1,256 @@
+#include <stdio.h>
+
+int main(){
+    char velha[3][3] = {
+        { ' ', ' ', ' '},
+        { ' ', ' ', ' '},
+        { ' ', ' ', ' '}
+};
+    char jogador;
+    int posi;
+    int posj;
+    int vencedorx = 0;
+    int vencedoro = 0;
+    int jogadas = 0;
+    int escolha;
+    
+do{
+    printf("===========================\n");
+    printf("||                      ||\n");
+    printf("||   Seja bem vindo!ツ  ||");
+    printf("\n||                      ||");
+    printf("\n===========================\n");
+    printf("\n~ Digite [ 1 ] para começar o Jogo da Velha ~\n");
+    printf("\n~ Ou digite [ 2 ] para sair ~\n");
+    printf("\nEscolha: ");
+    scanf("%d", &escolha);
+       
+       if(escolha == 2){
+   
+            return 0;
+       }else if(escolha == 1){
+
+
+    for(int i = 0; i < 3; i++){
+        printf("\n");
+
+        for(int j = 0; j < 3; j++){
+            printf("| %c |", velha[i][j]);
+        }
+    }
+
+   
+do{
+    do{
+        jogador = 'X';
+            //JOGADA JOG X 1
+            for(int i = 0; i < 1; i++){
+            for(int j = 0; j < 1; j++){
+                printf("\n\nJogador %c", jogador);
+                printf("\nlinha 0 a 2:  ");
+                scanf("%d", &posi);
+                printf("coluna 0 a 2:  ");
+                scanf("%d", &posj);
+            }
+        }
+        
+        if(velha[posi][posj] != ' '){
+            printf("essa posição já esta ocupada tente novamente!");
+        }
+    }while(velha[posi][posj] != ' ');
+
+    switch(posi){
+        case 0:
+        if(posj == 0){
+            velha[0][0] = 'X';
+             jogadas++;
+        }else if(posj == 1){
+            velha[0][1] = 'X';
+             jogadas++;
+        }else if(posj == 2){
+            velha[0][2] = 'X';
+            jogadas++;
+        
+        }
+        break;
+       
+        case 1:
+        if(posj == 0){
+            velha[1][0] = 'X';
+             jogadas++;
+        }else if(posj == 1){
+            velha[1][1] = 'X';
+             jogadas++;
+        }else if(posj == 2){
+            velha[1][2] = 'X';
+             jogadas++;
+        }
+        break;
+       
+        case 2:
+        if(posj == 0){
+            velha[2][0] = 'X';
+             jogadas++;
+        }else if(posj == 1){
+            velha[2][1] = 'X';
+             jogadas++;
+        }else if(posj == 2){
+            velha[2][2] = 'X';
+             jogadas++;
+        }
+        break;
+        default:
+        return 0;
+        break;
+    }
+
+    for(int i = 0; i < 3; i++){
+        printf("\n");
+
+        for(int j = 0; j < 3; j++){
+            printf("| %c |", velha[i][j]);
+        }
+    }
+//PRIMERA LINHA
+if (velha[0][0] == 'X' && velha[0][0] == velha[0][1] && velha[0][1] == velha[0][2]) {
+    vencedorx++;
+    continue;
+//SEGUNDA LINHA
+}else if (velha[1][0] == 'X' && velha[1][0] == velha[1][1] && velha[1][1] == velha[1][2]) {
+    vencedorx++;
+    continue;
+//TERCEIRA LINHA
+}else if (velha[2][0] == 'X' && velha[2][0] == velha[2][1] && velha[2][1] == velha[2][2]) {
+    vencedorx++;
+    continue;
+//DIAGONAL DECRECENTE
+}else if (velha[0][0] == 'X' && velha[0][0] == velha[1][1] && velha[1][1] == velha[2][2]) {
+    vencedorx++;
+    continue;
+//DIAGONAL CRECENTE
+}else if (velha[0][2] == 'X' && velha[0][2] == velha[1][1] && velha[1][1] == velha[2][0]) {
+    vencedorx++;
+    continue;
+//PRIMEIRA COLUNA
+}else if(velha[0][0] == 'X' && velha[0][0] == velha[1][0] && velha[1][0] == velha[2][0]) {
+    vencedorx++;
+    continue;
+//SEGUNDA COLUNA
+}else if(velha[0][1] == 'X' && velha[0][1] == velha[1][1] && velha[1][1] == velha[2][1]) {
+    vencedorx++;
+    continue;
+//TERCEIRA COLUNA
+}else if(velha[0][2] == 'O' && velha[0][2] == velha[1][2] && velha[1][2] == velha[2][2]) {
+    vencedorx++;
+    continue;
+}
+
+do{
+        jogador = 'O';
+            //JOGADA JOG X 1
+            for(int i = 0; i < 1; i++){
+            for(int j = 0; j < 1; j++){
+                printf("\n\nJogador %c", jogador);
+                printf("\nlinha 0 a 2:  ");
+                scanf("%d", &posi);
+                printf("coluna 0 a 2:  ");
+                scanf("%d", &posj);
+            }
+        }
+        
+        if(velha[posi][posj] != ' '){
+            printf("\n\nEssa posição já esta ocupada tente novamente!\n\n");
+        }
+    }while(velha[posi][posj] != ' ');
+
+    switch(posi){
+        case 0:
+        if(posj == 0){
+            velha[0][0] = 'O';
+        }else if(posj == 1){
+            velha[0][1] = 'O';
+        }else if(posj == 2){
+            velha[0][2] = 'O';
+        }
+        break;
+       
+        case 1:
+        if(posj == 0){
+            velha[1][0] = 'O';
+        }else if(posj == 1){
+            velha[1][1] = 'O';
+        }else if(posj == 2){
+            velha[1][2] = 'O';
+        }
+        break;
+       
+        case 2:
+        if(posj == 0){
+            velha[2][0] = 'O';
+        }else if(posj == 1){
+            velha[2][1] = 'O';
+        }else if(posj == 2){
+            velha[2][2] = 'O';
+        }
+        break;
+        default:
+        return 0;
+        break;
+    }
+        for(int i = 0; i < 3; i++){
+        printf("\n");
+
+        for(int j = 0; j < 3; j++){
+            printf("| %c |", velha[i][j]);
+        }
+    }
+
+//PRIMERA LINHA
+if (velha[0][0] == 'O' && velha[0][0] == velha[0][1] && velha[0][1] == velha[0][2]) {
+    vencedoro++;
+    continue;
+//SEGUNDA LINHA
+}else if (velha[1][0] == 'O' && velha[1][0] == velha[1][1] && velha[1][1] == velha[1][2]) {
+    vencedoro++;
+    continue;
+//TERCEIRA LINHA
+}else if (velha[2][0] == 'O' && velha[2][0] == velha[2][1] && velha[2][1] == velha[2][2]) {
+    vencedoro++;
+    continue;
+//DIAGONAL DECRECENTE
+}else if (velha[0][0] == 'O' && velha[0][0] == velha[1][1] && velha[1][1] == velha[2][2]) {
+    vencedoro++;
+    continue;
+//DIAGONAL CRECENTE
+}else if (velha[0][2] == 'O' && velha[0][2] == velha[1][1] && velha[1][1] == velha[2][0]) {
+    vencedoro++;
+    continue;
+//PRIMEIRA COLUNA
+}else if(velha[0][0] == 'O' && velha[0][0] == velha[1][0] && velha[1][0] == velha[2][0]) {
+    vencedoro++;
+    continue;
+//SEGUNDA COLUNA
+}else if(velha[0][1] == 'O' && velha[0][1] == velha[1][1] && velha[1][1] == velha[2][1]) {
+    vencedoro++;
+    continue;
+//TERCEIRA COLUNA
+}else if(velha[0][2] == 'O' && velha[0][2] == velha[1][2] && velha[1][2] == velha[2][2]) {
+    vencedoro++;
+    continue;
+}
+}while(vencedorx == 0 && vencedoro == 0 || jogadas == 9);
+
+if(vencedorx == 1){
+    printf("\n\nPARABENS, O JOGADOR ---> X <--- VENCEU\n\n");
+}else if(vencedoro == 1){
+    printf("\n\nPARABENS, O JOGADOR ---> O <--- VENCEU\n\n");
+}if(jogadas == 9){
+    printf("\n\nDEU VELHA!!!!\n\n");
+}
+}else{
+    printf("Invalido!!!\n\n");
+}
+}while(escolha != 2);
+
+    return 0;
+}
