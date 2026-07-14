@@ -1,0 +1,61 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+float numero1;
+float numero2;
+char operadores;
+float conta;
+int naotermina = 1;
+
+do{ 
+        printf("\n=========================================\n");
+        printf("         CALCULADORA VIRTUAL\n");
+        printf("=========================================\n");
+         printf("======[ 1 ]=======[ 2 ]=======[ 3 ]======\n");
+         printf("======[ 4 ]=======[ 5 ]=======[ 6 ]======\n");
+         printf("======[ 7 ]=======[ 8 ]=======[ 9 ]======\n");
+         printf("======[ 0 ]=======[ + ]=======[ - ]======\n");
+         printf("======[ * ]=======[ / ]==================\n");
+        printf("\n=========================================\n");
+
+        printf("\nEscolha um NÚMERO: ");
+        scanf("%f", &numero1);
+                printf("\nEscolha outro NÚMERO: ");
+        scanf("%f", &numero2);
+        printf("Digite um OPERADOR: ");
+        scanf(" %c", &operadores);
+        
+        
+        if(operadores == '-'){
+         conta=   numero1 - numero2;
+        }else if(operadores == '*'){
+         conta=   numero1 * numero2;
+        }
+         else if(operadores == '+'){
+         conta=   numero1 + numero2;
+        }
+         else if(operadores == '/'){
+         conta = numero1 / numero2;
+        }
+        else {
+ 
+printf("================================\n");
+printf("=      /!\\      /!\\            =\n");
+printf("=     /!!!\\    /!!!\\           =\n");
+printf("=      !!!      !!!            =\n");
+printf("=      !!!      !!!            =\n");
+printf("=       !        !             =\n");
+printf("=                              =\n");
+printf("=       VALOR INVÁLIDO         =\n");
+printf("=      VERIFIQUE OS DADOS      =\n");
+printf("=      TENTE NOVAMENTE!        =\n");
+printf("================================\n");          
+exit(0);
+        }    
+printf("RESULTADO: %.2f", conta);
+
+}while(naotermina != 0);
+    return 0;
+}
